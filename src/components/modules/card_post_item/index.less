@@ -1,0 +1,92 @@
+@border-color: #e6e6e6;
+@tip-color: #666;
+@person-color: #2aba66;
+@font-color: #333;
+@act-color: #999;
+
+.card-post-item {
+  .height(212);
+  .margin-left(30);
+  .border-1px-top(@border-color);
+  background-color: #fff;
+  font-size: 0;
+  overflow: hidden;
+
+  .avatar_wrap {
+    float: left;
+
+    > img {
+      .width(68);
+      .height(68);
+      .margin-top(26);
+      .border-radius(50%);
+    }
+  }
+
+  .content_section {
+    float: left;
+    .width(600);
+    .margin-left(12);
+    .margin-top(30);
+
+    .content {
+      display: flex;
+      flex-direction: row;
+
+      .text_content {
+        flex: 1;
+
+        .name {
+          .font-size(24);
+          .line-height(33);
+          color: @tip-color;
+
+          > span {
+            color: @font-color;
+          }
+        }
+
+        .text_title {
+          .width(600);
+          .margin-top(10);
+          .font-size(34);
+          .line-height(48);
+          color: @font-color;
+
+          > p {
+            // 省略文本
+            .ellipsis();
+            word-wrap: break-word;
+            word-break: normal;
+          }
+        }
+      }
+    }
+
+    .details {
+      .margin-top(32);
+      color: @act-color;
+
+      .time {
+        .font-size(26);
+      }
+
+      .operate {
+        float: right;
+        background: url('../../../assets/images/person.png') no-repeat left center;
+        .background-size(16, 22);
+
+        .operate_icon {
+          .margin-left(12);
+
+          > span {
+            .padding-left(15);
+            .font-size(24);
+            line-height: 100%;
+            color: @person-color;
+          }
+        }
+      }
+    }
+  }
+}

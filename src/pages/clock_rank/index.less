@@ -1,0 +1,130 @@
+@import '../../styles/base/base-750';
+@import "../../styles/base/border";
+
+.clock_rank_page {
+
+  .my_clock {
+    position: relative;
+    .padding-bottom(30);
+    background: #ECECEC;
+
+    .clock_con {
+      .height(120);
+      .padding-left(15);
+      .line-height(120);
+      background: #fff;
+
+      .ranking_index {
+        float: left;
+        .width(75);
+        height: 100%;
+      }
+
+      > img {
+        float: left;
+        display: inline-block;
+        .width(72);
+        .height(72);
+        .margin(22, 18, 26, 0);
+      }
+
+      > div {
+        float: left;
+        height: 100%;
+        .line-height(0);
+
+        > p {
+          .height(48);
+          .line-height(48);
+          .font-size(34);
+          .margin-top(16);
+          color: #000;
+        }
+
+        > span {
+          display: block;
+          .height(40);
+          .line-height(40);
+          .font-size(28);
+          color: #7D7D7D;
+        }
+      }
+
+      .fullname {
+        float: left;
+        height: 100%;
+        .font-size(32);
+      }
+    }
+
+    .clock {
+      position: absolute;
+      .right(40);
+      .font-size(28);
+      color: #959595;
+    }
+  }
+
+  .ranking_con {
+    .padding-left(15);
+
+    .ranking_list {
+      position: relative;
+      .height(120);
+      .line-height(120);
+      .padding-left(15);
+      overflow: hidden;
+      .border-1px-bottom(#EEE);
+
+      .ranking_index {
+        float: left;
+        display: inline-block;
+        .width(60);
+        .font-size(38);
+        color: #A6A6A6;
+      }
+
+      > img {
+        float: left;
+        display: inline-block;
+        .width(72);
+        .height(72);
+        .margin(22, 18, 26, 0);
+      }
+
+      > p {
+        float: left;
+        display: inline-block;
+        .font-size(32);
+        color: #000;
+      }
+
+      .clock {
+        position: absolute;
+        .right(25);
+        .width(380);
+        text-align: right;
+        .font-size(28);
+        color: #959595;
+      }
+
+      .clock.on {
+        color: #FFAB2C;
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+    .height(120);
+    .line-height(120);
+    .font-size(28);
+    color: #999;
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}

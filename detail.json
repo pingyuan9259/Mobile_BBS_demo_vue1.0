@@ -1,0 +1,22 @@
+{
+  "contents":{
+    "text": [
+      {
+        "mediaId":111111,
+        "mediaContent":"内容内容"
+      }
+    ],
+    "images": [
+      {
+        "mediaId":22,
+        "mediaContent":"http://www.a.com/1.jpg"
+      },
+      {
+        "mediaId":33,
+        "mediaContent":"http://www.a.com/2.jpg"
+      }
+    ],
+    "video":[],
+    "audio":[]
+  }
+}

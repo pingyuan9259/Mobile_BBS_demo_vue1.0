@@ -1,0 +1,128 @@
+@import "../../styles/base/base-750";
+@import "../../styles/base/border";
+
+.at_me_page {
+
+  > ul {
+
+    > li {
+      .padding-left(30);
+      .border-1px-bottom(#E3E3E3);
+
+      .header {
+        .height(122);
+        .line-height(122);
+
+        > img {
+          float: left;
+          .width(66);
+          .height(66);
+          border-radius: 100%;
+          .margin(30, 16, 0, 0)
+        }
+
+        .name {
+          float: left;
+          .font-size(32);
+          color: #595959;
+        }
+      }
+      .reply-box {
+
+        .describe {
+          .margin-right(30);
+          .font-size(34);
+          color: #000;
+        }
+        .show-more {
+          .width(120);
+          .height(40);
+          .font-size(26);
+          color: #909090;
+          .margin-top(0);
+          .margin-left(595);
+        }
+      }
+
+      .at_me_img {
+        position: relative;
+        display: block;
+        .width(162);
+        .height(162);
+        overflow: hidden;
+        .margin-top(20);
+        .margin-left(24);
+
+        > img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform:translate(-50%, -50%);
+          transform:translate(-50%, -50%);
+        }
+      }
+
+      .at_me_con {
+        .margin-top(20);
+        color: #000;
+        font-size: 0;
+
+        .tip {
+          display: inline-block;
+          vertical-align: top;
+          .width(104);
+          .font-size(26);
+        }
+
+        .at_me {
+          display: inline-block;
+          .width(585);
+
+          > div{
+            display: inline-block;
+
+            > a {
+              .font-size(28);
+              color: #3D83D7;
+            }
+
+            > span {
+              .font-size(28);
+            }
+          }
+        }
+      }
+
+      .foot {
+        .height(97);
+        .padding-right(30);
+        .line-height(97);
+        .font-size(28);
+        color: #959595;
+
+        .time {
+          float: left;
+        }
+
+        .title {
+          float: right;
+        }
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+    .height(120);
+    .line-height(120);
+    .font-size(28);
+    color: #999;
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+

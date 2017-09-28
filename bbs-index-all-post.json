@@ -1,0 +1,52 @@
+{
+    "code":1,"result":
+    {
+        "activityBeginAt":"2016-12-12",
+        "activityEndAt":"2016-12-12",
+        "agreeNum":12,
+        "applyBeginAt":"2016-10-10",
+        "applyEndAt":"2016-10-12",
+        "atMembers":[
+            {
+                "userId":77327,"userName":"测试内容nrlv"
+            }
+        ],
+        "canDelete":1,
+        "canJoin":1,
+        "canVote":1,
+        "contents":[
+            {
+                "mediaContent":"好个秋","mediaId":111111,"mediaType":1
+            }
+        ],
+        "disagreeNum":10,
+        "fee":100,
+        "goal":"连续打卡20天，前50名拿奖励",
+        "id":1,
+        "joinMembers":
+        {
+            "memberList":[
+                {
+                    "avatar":"http: //1.jpg","userId":"111111"
+                }
+            ],"total":80
+        },
+        "likeMembers":[
+            {
+                "name":"蔡依林","userId":"11111"
+            }
+        ],
+        "likeNumber":23,
+        "likeOrNot":1,
+        "replyNumber":54,
+        "type":1,
+        "userAvatar":"http: //1.jpg",
+        "userId":2,
+        "userName":"李易峰",
+        "voteMembers":[
+            {
+                "avatar":"http: //1.jpg","voterId":"21212"
+            }
+        ]
+    }
+}

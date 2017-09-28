@@ -1,0 +1,255 @@
+@import "../../styles/base/base-750";
+@import "../../styles/base/border";
+
+.clock_record_page {
+
+  .header {
+    position: relative;
+    width: 100%;
+    .height(450);
+    color: #fff;
+    background: url('../../assets/images/sign_bg.png') repeat-x;
+    .background-size(750, 450);
+
+    .sign_info {
+      .padding(50);
+      .font-size(32);
+
+      > p {
+        font-weight: bold;
+      }
+
+      .clock {
+        float: left;
+      }
+
+      .ranking {
+        float: right;
+      }
+    }
+
+    > p {
+      .margin-top(216);
+      text-align: center;
+      .font-size(36);
+    }
+
+    .clock_page {
+      position: absolute;
+      left: 50%;
+      .top(50);
+      .width(292);
+      .height(292);
+      .margin-left(-146);
+
+      .circle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        .stars {
+          position: absolute;
+          left: 50%;
+          .top(-14);
+          .width(32);
+          .height(32);
+          .margin-left(-16);
+          background: url('../../assets/images/stars.png') no-repeat;
+          .background-size(32, 32);
+          transform-origin: unit(16/2, px) unit(160/2, px);
+          transform-origin: unit(16/75, rem) unit(160/75, rem);
+          -webkit-transform-origin: unit(16/2, px) unit(160/2, px);
+          -webkit-transform-origin: unit(16/75, rem) unit(160/75, rem);
+        }
+      }
+
+      .con {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        .margin(-130, 0, 0, -130);
+        .width(260);
+        .height(147);
+        .font-size(24);
+        color: #178C86;
+        .border-radius(130, 130, 0, 0);
+        background: #fff;
+
+        > p {
+          position: absolute;
+          left: 0;
+          .bottom(15);
+          width: 100%;
+          font-weight: bold;
+          text-align: center;
+
+          > span {
+            .font-size(90);
+            font-weight: normal;
+            color: #04BAB1;
+          }
+        }
+      }
+
+      .target {
+        .font-size(42);
+        .margin-top(180);
+        text-align: center;
+      }
+    }
+  }
+
+  .clock_list {
+    .padding-top(16);
+    .padding-bottom(100);
+    .padding-left(30);
+    font-size: 0;
+
+    > li {
+      float: left;
+      display: inline-block;
+      .height(138);
+      .margin(30, 25, 0, 0);
+
+      > a {
+        position: relative;
+        display: block;
+        .width(76);
+        .height(76);
+        .font-size(35);
+        text-align: center;
+        .line-height(76);
+        color: #fff;
+        border-radius: 50%;
+        // .border-1px-all(#959595);
+
+        &:after {
+          border-radius: 50%;
+        }
+
+        &:before {
+          .width(45);
+          .height(32);
+          .margin-top(2);
+          color: #74E993;
+        }
+      }
+
+      > p {
+        .height(40);
+        .line-height(40);
+        .font-size(28);
+        .margin-top(22);
+        color: #959595;
+        text-align: center;
+      }
+
+      .icon-fail {
+        background: #FFECCF;
+        border: 1px solid #FFC552;
+        &:before {
+          position: absolute;
+          left: 50%;
+          .top(9);
+          .margin-left(-3);
+          content: "";
+          .width(6);
+          .height(48);
+          background: #FFC552;
+          transform: rotate(37deg);
+          -webkit-transform: rotate(37deg);
+        }
+      }
+
+      .active.icon-ok {
+        background: #D8FFE3;
+        border: 1px solid #74E993;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .on.icon-ok {
+        background: #FFAB2C;
+        &:after {
+          display: none;
+        }
+      }
+
+      .icon-not {
+        background: #FFEDED;
+        border: 1px solid #FF8B8B;
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          font-weight: 700;
+          color: #FF8B8B;
+        }
+      }
+
+      .no_clcok {
+        background: #F8F8F8;
+        border: 1px solid #CCCCCC;
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          font-weight: 700;
+          color: #CCCCCC;
+        }
+      }
+
+      .data_no_clcok {
+        color: #CCCCCC;
+      }
+
+      .date-not {
+        color: #FF8B8B;
+      }
+
+      .date-fail {
+        color: #FFC552;
+      }
+
+      .date-ok {
+        color: #74E993;
+      }
+    }
+  }
+
+  .clock_btn {
+    .border-1px-top(#B4B4B4);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .height(100);
+    text-align: center;
+    .line-height(100);
+    .font-size(34);
+    color: #525252;
+    background: #F7F7F7;
+  }
+}
+
+.data_no_clcok {
+  color: #CCCCCC;
+}
+
+.date-not {
+  color: #FF8B8B;
+}
+
+.date-fail {
+  color: #FFC552;
+}
+
+.date-ok {
+  color: #74E993;
+}

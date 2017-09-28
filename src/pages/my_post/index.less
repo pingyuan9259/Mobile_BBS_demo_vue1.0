@@ -1,0 +1,130 @@
+@import "../../styles/base/base-750";
+@import "../../styles/base/ellipsis.less";
+@import "../../styles/base/border";
+
+.my_post_page {
+
+  .color_52 {
+    color: #525252;
+  }
+
+  .color_F659 {
+    color: #FF6659;
+  }
+
+  .post_list {
+
+    > li {
+      .width(750);
+      .padding-top(30);
+      .border-1px-bottom(#E3E3E3);
+
+      .examine_label {
+        .height(36);
+        .padding-right(30);
+        .line-height(36);
+        text-align: right;
+        .font-size(26);
+      }
+
+      > div {
+
+        .portrait {
+          float: left;
+          .padding(0, 12, 0, 26);
+
+          > img {
+            .width(68);
+            .height(68);
+            border-radius: 100%;
+          }
+        }
+
+        .con {
+          float: left;
+          .width(610);
+
+          .post_info {
+            display: inline;
+
+            > h6 {
+              .font-size(24);
+              font-weight: normal;
+              -webkit-margin-before: 0;
+              -webkit-margin-after: 0;
+              color: #000;
+              .margin-left(10);
+            }
+
+            > p {
+              .font-size(34);
+              .margin-left(7);
+              .multiple-line-ellipsis-shrink(2, 48);
+
+              .lable {
+                position: relative;
+                left: 0;
+                .top(-5);
+                display: inline-block;
+                .width(58);
+                .height(32);
+                font-style: normal;
+                text-align: center;
+                .line-height(32);
+                .font-size(22);
+                color: #fff;
+                background: #FFB635;
+                .border-radius(3);
+              }
+            }
+          }
+
+          .cover {
+            position: relative;
+            float: right;
+            .width(132);
+            .height(132);
+            .margin(51, 0, 21, 20);
+            overflow: hidden;
+
+            > img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              -webkit-transform:translate(-50%, -50%);
+              transform:translate(-50%, -50%);
+            }
+          }
+
+          .post_foot {
+            .font-size(26);
+            color: #959595;
+            .padding(21, 0, 25, 7);
+
+            .time {
+              float: left;
+            }
+
+            .title {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+    .height(120);
+    .line-height(120);
+    .font-size(28);
+    color: #999;
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}

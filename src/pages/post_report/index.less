@@ -1,0 +1,49 @@
+@import "../../styles/base/base-750";
+
+.reply-con {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ECECEC;
+  z-index: 1;
+
+  .reply-head {
+    .font-size(28);
+    color: #9C9C9C;
+    .padding(30, 30 ,15 ,30);
+  }
+
+  .reply-list {
+    width: 100%;
+    .height(534);
+    background: #fff;
+
+    > li {
+      width: 100%;
+      .height(89);
+      .line-height(89);
+      .font-size(30);
+      color: #333;
+      .padding(0, 0, 0, 30);
+      border-bottom: 1px solid #ECECEC;
+    }
+
+    > li.active {
+      background: #D9D9D9;
+    }
+  }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    .height(88);
+    .line-height(88);
+    text-align: center;
+    .font-size(30);
+    color: #41A8A1;
+    background: #FFF;
+    .margin-top(40);
+  }
+}

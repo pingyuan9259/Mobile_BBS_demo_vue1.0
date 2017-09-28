@@ -1,0 +1,87 @@
+@border-color: #e6e6e6;
+@tip-color: #666;
+@person-color: #04c1b8;
+@font-color: #333;
+@act-color: #999;
+
+.common-post-item {
+  .border-1px-bottom(@border-color);
+  .margin-left(30);
+  .padding-bottom(27);
+  font-size: 0;
+
+  .avatar_wrap {
+    float: left;
+
+    > img {
+      .width(68);
+      .height(68);
+      .margin-top(26);
+      .border-radius(50%);
+    }
+  }
+
+  .content_section {
+    float: left;
+    .width(600);
+    .margin-left(12);
+    .margin-top(30);
+
+    .content {
+      display: flex;
+      flex-direction: row;
+
+      .text_content {
+        flex: 1;
+
+        .name {
+          .font-size(24);
+          .line-height(33);
+          color: @tip-color;
+        }
+
+        .text_title {
+          .width(600);
+          // 省略文本
+          .multiple-line-ellipsis-shrink(2, 48);
+          .margin-top(10);
+          .font-size(34);
+          .line-height(48);
+          color: @font-color;
+
+          > p {
+            word-wrap: break-word;
+            word-break: normal;
+          }
+        }
+      }
+    }
+
+    .details {
+      .margin-top(32);
+      color: @act-color;
+
+      .time {
+        .font-size(26);
+      }
+
+      .operate {
+        float: right;
+
+        .operate_icon {
+          .font-size(25);
+          .margin-left(40);
+
+          > span {
+            .padding-left(15);
+            .font-size(26);
+          }
+        }
+
+        .icon-reply:before {
+          .margin-top(2);
+        }
+      }
+    }
+  }
+}

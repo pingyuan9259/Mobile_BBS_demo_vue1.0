@@ -1,0 +1,28 @@
+@import "../../styles/base/base-750";
+
+.favor_page {
+  border: 1px solid transparent;
+  background-color: #eee;
+  height: 100vh;
+
+  .mint-cell {
+    .padding(35);
+    .margin-top(20);
+
+    .mint-cell-text {
+      .font-size(34);
+    }
+
+    .mint-cell-allow-right:after {
+      .width(16);
+      .height(16);
+      border: 1px solid #c8c8cd;
+      border-radius: 1px;
+      border-bottom-width: 0;
+      border-left-width: 0;
+    }
+  }
+  .mint-cell:before {
+    border-bottom: none !important;
+  }
+}

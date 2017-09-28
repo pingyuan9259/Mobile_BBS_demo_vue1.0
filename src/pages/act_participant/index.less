@@ -1,0 +1,61 @@
+@import '../../styles/base/base-750';
+@import "../../styles/base/reset";
+
+.rarticipant_page {
+
+  .join_vote {
+    .padding(23, 30);
+    .font-size(30);
+    color: #525252;
+    background: #ECECEC;
+  }
+
+  .favor_con {
+    .padding-left(15);
+
+    .favor_list {
+      position: relative;
+      .height(120);
+      .line-height(120);
+      .padding-right(15);
+      font-size: 0;
+      overflow: hidden;
+      border-bottom: solid 1px #eee;
+
+      > img {
+        float: left;
+        .width(72);
+        .height(72);
+        .margin(22, 18, 26, 15);
+      }
+
+      > p {
+        float: left;
+        display: inline-block;
+        .font-size(34);
+        color: #000;
+      }
+
+      > span {
+        position: absolute;
+        .right(15);
+        .font-size(28);
+        color: #959595;
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+    .height(120);
+    .line-height(120);
+    .font-size(28);
+    color: #999;
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,336 @@
+@import '../../styles/base/base-750';
+@import "../../styles/base/ellipsis.less";
+@import "../../styles/base/border";
+
+@fontcolor: #959595;
+@font-color: #999;
+@active-color: #2aba66;
+@border-color: #d5d5d5;
+
+.forum_list_page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+
+  .tabBar-con {
+    .border-1px-bottom(@border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .height(80);
+    text-align: center;
+    .line-height(80);
+    font-size: 0;
+    background-color: #fff;
+    z-index: 100;
+
+    .tab-item {
+      display: inline-block;
+      width: 32%;
+      height: 100%;
+      .font-size(30);
+      color: @font-color;
+
+      > span {
+        display: inline-block;
+        .width(130);
+        height: 100%;
+      }
+    }
+
+    .tab-item.active {
+      color: @active-color;
+
+      > span {
+        .border-bottom(6, solid, @active-color);
+      }
+    }
+
+    .tab-item.card-tab {
+      width: 50%;
+    }
+  }
+
+  .operation-con {
+    .height(80);
+    .line-height(80);
+    .font-size(28);
+    .padding(0, 30);
+    background-color: #f7f7f7;
+    .margin-top(80);
+
+    .active-num {
+      float: left;
+      color: @font-color;
+
+      &:before {
+        position: relative;
+        display: inline-block;
+        .top(-5);
+        content: '';
+        .width(8);
+        .height(8);
+        .margin-right(10);
+        border-radius: 50%;
+        background-color: @font-color;
+      }
+    }
+
+    > a {
+      float: right;
+      color: @active-color;
+    }
+
+    .sort-btn {
+      position: relative;
+      float: right;
+
+      .icon-down {
+        color: @active-color;
+
+        &:before {
+          float: right;
+          .font-size(14);
+          .margin-top(34);
+          .margin-left(10);
+        }
+      }
+
+      .icon-down.active {
+
+        &:before {
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transform-origin: 75% 50%;
+          -webkit-transform-origin: 75% 50%;
+        }
+      }
+
+      .sort-plug {
+        position: absolute;
+        right: 0;
+        .bottom(-224);
+        .width(240);
+        .height(214);
+        .padding-top(20);
+        background-color: rgba(0, 0, 0, .6);
+        .border-radius(6);
+        z-index: 100;
+
+        &:after {
+          position: absolute;
+          .right(35);
+          .top(-52);
+          content: "";
+          height: 0;
+          width: 0;
+          .border-width(26, 20);
+          border-style: solid;
+          border-color: transparent  transparent rgba(0, 0, 0, 0.6) transparent;
+        }
+
+        .sort-item {
+          .font-size(28);
+          color: #e6e6e6;
+          .line-height(40);
+          .padding(26, 0);
+          .margin-left(30);
+          .border-1px-bottom(@border-color);
+
+          > i {
+            float: right;
+            font-style: normal;
+            .margin-top(4);
+            .margin-right(30);
+            display: none;
+          }
+        }
+
+        .sort-item:last-child {
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .sort-item.active {
+
+          .icon-ok {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .operation-con.active {
+    margin-top: 0;
+  }
+
+  .operation-con.top {
+    .margin-top(80);
+  }
+
+  .active-con {
+    background-color: #fff;
+
+    .active-post-item:last-child:after,
+    .common-post-item:last-child:after {
+        display: none;
+    }
+
+    .card-column {
+
+      .date-title {
+        position: relative;
+        .height(88);
+        .line-height(88);
+        .font-size(32);
+        color: #333;
+        .margin-left(30);
+
+        .drop-down {
+          position: absolute;
+          .right(28);
+          .top(37);
+          .width(35);
+          .height(24);
+          background: url('//o4a7cbihz.qnssl.com/cover/5f30c93a-a149-4d69-9192-f4e09c184f2c') no-repeat right top;
+          .background-size(28, 14);
+          transform:rotate(180deg);
+          -webkit-transform:rotate(180deg);
+        }
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        .height(20);
+        background-color: #f7f7f7;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+
+    .card-column.active {
+
+      .card-post-item {
+        display: none;
+      }
+
+      .drop-down {
+        background-position: left bottom;
+        transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+      }
+    }
+  }
+
+  .more-live,
+  .load-more {
+    text-align: center;
+    .height(88);
+    .line-height(88);
+    .font-size(30);
+    color: @font-color;
+    background-color: #f7f7f7;
+  }
+  .place {
+    winth: 100%;
+    .height(100);
+  }
+  .more-live {
+    display: block;
+    .width(750);
+  }
+
+  .load-more {
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+
+  .sort-con {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+
+  .apply_action {
+    .border-1px-top(@border-color);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .height(100);
+    text-align: center;
+    .line-height(100);
+    .font-size(34);
+    color: @active-color;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .forum_action {
+    .border-1px-top(#CDCDCD);
+    position: fixed;
+    display: flex;
+    bottom: 0px;
+    width: 100%;
+    .height(100);
+    background-color: #F9F9F9;
+    align-items: center;
+
+    div {
+      flex: 1;
+      .font-size(34);
+      .line-height(100);
+      color: #2ABA66;
+      text-align: center;
+    }
+    .punched{
+      color: @fontcolor;
+    }
+    i {
+      .width(2);
+      .height(60);
+      .border-1px-right(#CDCDCD);
+    }
+
+    // .to-channel {
+    //   display: inline-block;
+    //   .width(60);
+    //   .height(60);
+    //   .margin-left(20);
+    //   .margin-right(20);
+    //   background-image: url(//o4a7cbihz.qnssl.com/article/bdf9c7e6-f9ed-4cf5-89c9-0e8a3d832f10);
+    //   background-size: 100%;
+    // }
+    .js-button {
+      width: 100%;
+      display: flex;
+
+      .task, .came {
+        display: inline-block;
+        .border-1px-left(#CDCDCD);
+        flex: 1;
+      }
+    }
+  }
+}
+.confirm {
+  .font-size(34);
+  color: #2aba66 !important;
+}

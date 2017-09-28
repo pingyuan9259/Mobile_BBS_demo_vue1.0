@@ -1,0 +1,140 @@
+@font-color: #5a5a5a;
+@border-color: #959595;
+@link-color: #3d83d7;
+@tip-color: #999;
+
+.activity {
+  .padding-right(30);
+
+  .every-task {
+    .line-height(50);
+    .font-size(32);
+    color: @font-color;
+  }
+
+  .activity_details {
+    .width(690);
+    .padding(20, 30);
+    .margin-top(30);
+    .margin-bottom(100);
+    border: 1px dashed @border-color;
+    .border-radius(4);
+
+    p {
+      color: @font-color;
+      .font-size(28);
+      .line-height(48);
+    }
+  }
+
+  .join_btn {
+    .width(640);
+    .height(88);
+    .font-size(34);
+    margin: 0px auto;
+    .margin-bottom(60);
+    text-align: center;
+    .line-height(88);
+    color: #fff;
+    .border-radius(8);
+  }
+
+  .join_btn.can_join {
+    background-color: #2aba66;
+  }
+
+  .join_btn.can_not_join {
+    background-color: #CECECE;
+  }
+
+  .haspeople {
+    .width(690);
+    text-align: center;
+    .line-height(48);
+    color: @font-color;
+    .margin-bottom(60);
+
+    > span {
+      color: @link-color;
+    }
+
+    .join_member_total {
+      .font-size(32);
+      .margin-bottom(25);
+
+      span {
+        color: #3D83D7;
+      }
+    }
+
+    .join_member_list {
+      margin: 0 auto;
+      .join_member {
+        display: inline-block;
+        .margin(0, 5);
+        img {
+          .width(60);
+          .height(60);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .status-tip {
+    p {
+      .font-size(28);
+      color: #999;
+      text-align: center;
+      .margin-bottom(30);
+    }
+  }
+
+  .rule_con {
+    .height(45);
+    .padding(0, 25);
+    overflow: hidden;
+
+    .undo-activity {
+      float: left;
+      .line-height(42);
+      .font-size(30);
+      color: @link-color;
+    }
+
+    .activity_rule {
+      float: right;
+      .line-height(45);
+      .font-size(40);
+      color: @link-color;
+
+      &:before {
+        float: left;
+      }
+
+      > span {
+        float: left;
+        .margin-top(-2);
+        .font-size(32);
+      }
+    }
+  }
+}
+
+.msgbox-content {
+  .padding-top(45);
+
+  .msgbox-message {
+
+    > p {
+      .font-size(32);
+      .line-height(48);
+      color: #353535;
+    }
+  }
+  .confirm,
+  .cancel {
+    .font-size(34);
+    color: #2aba66 !important;
+  }
+}
